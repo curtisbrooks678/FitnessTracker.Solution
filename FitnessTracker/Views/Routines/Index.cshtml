@@ -1,0 +1,12 @@
+@using FitnessTracker.Models;
+@model List<FitnessTracker.Models.Routines>;
+
+<h1>Routines</h1>
+<ul>
+    @foreach (Routine routine in Model) 
+    {
+      <li>@Html.ActionLink($"{routine.Name}", "Details", new { id = routine.RoutineId })</li>
+    }
+</ul>
+
+<p>@Html.ActionLink("Add new routine", "Create")</p>

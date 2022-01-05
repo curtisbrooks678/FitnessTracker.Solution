@@ -1,0 +1,12 @@
+@using FitnessTracker.Models;
+@model List<FitnessTracker.Models.Gyms>
+
+<h1>Gyms</h1>
+<ul>
+    @foreach (Gym gym in Model)
+    {
+      <li>@Html.ActionLink($"{gym.Location}", "Details", new { id = gym.GymId })</li>
+    }
+</ul>
+
+<p>@Html.ActionLink("Add new gym", "Create")</p>

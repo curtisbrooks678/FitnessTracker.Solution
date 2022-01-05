@@ -11,7 +11,7 @@ namespace FitnessTracker.Models
 
     public Gym()
     {
-      this.Routines = new HashSet<Course>();
+      this.Routines = new HashSet<Routine>();
       this.Members = new HashSet<Member>();
     }
   }

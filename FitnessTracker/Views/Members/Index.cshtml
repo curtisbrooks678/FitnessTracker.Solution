@@ -1,0 +1,12 @@
+@using FitnessTracker.Models;
+@model List<FitnessTracker.Models.Member>
+
+<h1>Members</h1>
+<ul>
+  @foreach (Member member in Model)
+  {
+    <li>@Html.ActionLink($"{member.Name}", "Details", new { id = member.MemberId })</li>
+  }
+</ul>
+
+<p>@Html.ActionLink("Add new student", "Create")</p>
