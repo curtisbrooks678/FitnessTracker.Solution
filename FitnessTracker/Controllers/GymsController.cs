@@ -6,7 +6,7 @@ using FitnessTracker.Models;
 
 namespace FitnessTracker.Controllers
 {
-  public class GymsController : Controllers
+  public class GymsController : Controller
   {
     private readonly FitnessTrackerContext _db;
     public GymsController(FitnessTrackerContext db)

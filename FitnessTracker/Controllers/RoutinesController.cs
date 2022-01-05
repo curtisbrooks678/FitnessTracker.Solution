@@ -3,11 +3,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
-using Registrar.Models;
+using FitnessTracker.Models;
 
 namespace FitnessTracker.Controllers
 {
-  public class RoutinesController : Controllers
+  public class RoutinesController : Controller
   {
     private readonly FitnessTrackerContext _db;
     public RoutinesController(FitnessTrackerContext db)

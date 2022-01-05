@@ -1,0 +1,15 @@
+@model FitnessTracker.Models.Member
+
+<h2>Add a member</h2>
+
+<h4>Add a routine for this member: @Html.DisplayFor(model => model.Name)</h4>
+
+@using (Html.BeginForm())
+{
+  @Html.HiddenFor(model => model.MemberId)
+
+  @Html.Label("select routine")
+  @Html.DropDownList("RoutineId")
+
+  <input type="submit" value="Save">
+}

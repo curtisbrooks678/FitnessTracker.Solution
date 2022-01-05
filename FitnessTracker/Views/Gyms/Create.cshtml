@@ -1,0 +1,11 @@
+@model FitnessTracker.Models.Gym
+
+<h4>Add a new gym</h4>
+
+@using (Html.BeginForm())
+{
+  @Html.LabelFor(model => model.Location)
+  @Html.TextBoxFor(model => model.Location)
+
+  <input type="submit" value="Add new gym" class="btn btn-default"/>
+}

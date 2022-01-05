@@ -70,7 +70,7 @@ namespace FitnessTracker.Controllers
     [HttpPost]
     public ActionResult AddRoutine(Member member, int RoutineId)
     {
-      bool alreadyExists = _db.MemberRoutine.Any(memberRoutine => memberRoutine.MemberId == member.MemberId && routineMember.RoutineId == RoutineId);
+      bool alreadyExists = _db.MemberRoutine.Any(memberRoutine => memberRoutine.MemberId == member.MemberId && memberRoutine.RoutineId == RoutineId);
       if (RoutineId != 0 && !alreadyExists)
       {
         _db.MemberRoutine.Add(new MemberRoutine() { RoutineId = RoutineId, MemberId = member.MemberId });

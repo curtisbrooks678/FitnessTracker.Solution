@@ -6,7 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using FitnessTracker.Models;
 
-namespace Registrar
+namespace FitnessTracker
 {
   public class Startup
   {
