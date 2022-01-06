@@ -5,10 +5,10 @@
 @using (Html.BeginForm())
 {
   @Html.LabelFor(model => model.Name)
-  @Html.TextBoxFor(model => model.Name)
+  @Html.TextBoxFor(model => model.Name, new {@required="required"})
 
   @Html.LabelFor(model => model.RoutineDescription)
-  @Html.EditorFor(model => model.RoutineDescription)
+  @Html.EditorFor(model => model.RoutineDescription, new {@required="required"})
 
   @Html.Label("Select gym")
   @Html.DropDownList("GymId")
