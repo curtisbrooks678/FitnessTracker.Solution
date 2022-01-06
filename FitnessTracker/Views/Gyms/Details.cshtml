@@ -1,8 +1,9 @@
 @using FitnessTracker.Models;
 @model FitnessTracker.Models.Gym
 
+
 <h2>Gym Details</h2>
-<h3>Gym Location: @Html.DisplayFor(model => model.Location)</h3>
+<h3>Location: @Html.DisplayFor(model => model.Location)</h3>
 
 @if (@Model.Routines.Count == 0)
 {
@@ -37,3 +38,8 @@ else
 <p>@Html.ActionLink("Edit gym", "Edit", new { id = Model.GymId })</p>
 <p>@Html.ActionLink("Delete gym", "Delete", new {id = Model.GymId })</p>
 
+
+<div id="stats">
+  <h4>Total number of members: @Html.DisplayFor(model => model.Members.Count)</h4>
+  <h4>Total number of routines: @Html.DisplayFor(model => model.Routines.Count)</h4>
+</div>

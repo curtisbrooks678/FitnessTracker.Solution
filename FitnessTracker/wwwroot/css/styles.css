@@ -35,7 +35,7 @@ input {
 .btn {
   display: block;
   margin: 1em auto;
-  background-color: rgb(77, 92, 69);
+  background-color: purple;
   color: white;
 }
 
@@ -55,6 +55,7 @@ h4, h3 {
 .bottom-link {
   display: inline;
   margin-right: .75em;
+  margin-top: 3px;
 }
 
 .bottom-link a {
@@ -66,19 +67,19 @@ h4, h3 {
 }
 
 .bottom-link a:hover {
-  background-color: rgb(77, 92, 69);
+  background-color: purple;
   color: white;
   font-weight: normal;
 }
 
-
 #nav-ul {
+  background-color: rgb(241, 84, 202);
   display: flex;
-  margin-left: -2rem;
 }
 
 #nav-logo {
   font-size: 1.3rem;
+  margin-left: 1em;
 }
 
 #nav-li-2 {
@@ -91,20 +92,20 @@ nav li > *{
 }
 
 nav li a {
-  color: rgb(77, 92, 69);
+  color: black;
   text-decoration: none;
   font-size: 1.2rem;
 }
 
 nav li a:hover {
-  border-top: .5em solid rgb(77, 92, 69);
-  color: rgb(77, 92, 69);
+  border-top: .5em solid purple;
+  color: purple;
   font-weight: bold;
 }
 
 #hero-heading {
   text-align: center;
-  color:rgb(77, 92, 69);
+  color:black;
   font-weight: bold;
 }
 
@@ -165,8 +166,8 @@ nav li a:hover {
 }
 
 .member-details-li {
-  background-color: rgb(77, 92, 69);
-  color: white;
+  background-color: rgb(241, 84, 202);
+  color: black;
   width: 20em;
   padding: 1em 0;
   border-radius: .5em;
@@ -186,16 +187,16 @@ nav li a:hover {
 }
 
 #completed {
-  color: rgb(162, 236, 162);
+  color: blue;
 }
 
 #incomplete {
-  color: rgb(231, 96, 96);
+  color: darkred;
 }
 
 #member-details-filter a{
-  color: white;
-  background-color: rgb(77, 92, 69);
+  color: black;
+  background-color: rgb(241, 84, 202);
   padding: .25em .5em;
   border-radius: .25em;
 }

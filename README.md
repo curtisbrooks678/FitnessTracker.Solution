@@ -69,15 +69,20 @@ Copyright (c) _2022_ _Matt Luker_
 
 Project Goals
 
-_Make sure project meets friday project objectives
+<!-- _Make sure project meets friday project objectives -->
 -Look through all views and test all functionality.  Don't move on until everything works correctly
--Make all form entries required
--Make sure you can't add a empty form
--In Member and Routine details show what gym they belong to
--DateTime for StartDate working
--Redirect the completed toggle to Details for that member
+<!-- -In Member and Routine details show what gym they belong to -->
+<!-- -Redirect the completed toggle to Details for that member -->
+<!-- make deleting a routine from a member stay on the details -->
+
 -Images
 -Location Stats(how many members, how many people complete each routine, average completion of a routine, etc.)
+
+Stats Layout:
+- How many routines?
+- How many members?
+- How many routines completed?
+- Percentage of completed routines to members
 
 -Customize layout
 
