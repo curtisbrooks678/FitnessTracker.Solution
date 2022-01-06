@@ -59,7 +59,7 @@ namespace FitnessTracker.Controllers
     {
       _db.Entry(member).State = EntityState.Modified;
       _db.SaveChanges();
-      return RedirectToAction("Index");
+      return RedirectToAction("Details", new { id = member.MemberId });
     }
 
     public ActionResult AddRoutine(int id)
@@ -80,14 +80,15 @@ namespace FitnessTracker.Controllers
       _db.SaveChanges();
       if (alreadyExists)
       {
-        return RedirectToAction("AddRoutineError");
+        return RedirectToAction("AddRoutineError", new { id = member.MemberId });
       }
-      return RedirectToAction("Index");
+      return RedirectToAction("Details", new { id = member.MemberId });
     }
 
-    public ActionResult AddRoutineError()
+    public ActionResult AddRoutineError(int id)
     {
-      return View();
+      var thisMember = _db.Members.FirstOrDefault(member => member.MemberId == id);
+      return View(thisMember);
     }
 
     [HttpPost]
@@ -96,7 +97,7 @@ namespace FitnessTracker.Controllers
       var joinEntry = _db.MemberRoutine.FirstOrDefault(entry => entry.MemberRoutineId == joinId);
       joinEntry.Complete = !joinEntry.Complete;
       _db.SaveChanges();
-      return RedirectToAction("Index");
+      return RedirectToAction("Details", new { id = joinEntry.MemberId });
     }
 
     public ActionResult CompletedDetails(int id)
@@ -114,7 +115,7 @@ namespace FitnessTracker.Controllers
       var joinEntry = _db.MemberRoutine.FirstOrDefault(entry => entry.MemberRoutineId == joinId);
       _db.MemberRoutine.Remove(joinEntry);
       _db.SaveChanges();
-      return RedirectToAction("Index");
+      return RedirectToAction("Details", new { id = joinEntry.MemberId });
     }
 
     public ActionResult Delete(int id)

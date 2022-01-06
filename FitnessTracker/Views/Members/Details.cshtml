@@ -2,8 +2,8 @@
 
 <h2>Member Details</h2>
 <h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
-<h4>@Html.DisplayNameFor(model => model.StartDate): @Html.DisplayFor(model => model.StartDate)</h4>
-
+<h3>Start Date: @Html.DisplayFor(model => model.StartDate)</h3>
+<h3>@Html.DisplayNameFor(model => model.Gym.Location): @Html.DisplayFor(model => model.Gym.Location)</h3>
 
 @if (@Model.JoinEntities.Count == 0)
 {
