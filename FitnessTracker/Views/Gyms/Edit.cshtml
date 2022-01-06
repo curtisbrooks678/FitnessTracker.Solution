@@ -1,0 +1,12 @@
+@model FitnessTracker.Models.Gym
+
+<h4>Edit gym</h4>
+
+@using (Html.BeginForm())
+{
+  @Html.HiddenFor(model => model.GymId)
+  @Html.LabelFor(model => model.Location)
+  @Html.TextBoxFor(model => model.Location)
+
+  <input type="submit" value="Edit gym" class="btn btn-default"/>
+}

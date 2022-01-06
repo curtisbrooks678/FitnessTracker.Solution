@@ -1,0 +1,8 @@
+@model FitnessTracker.Models.Routine
+
+<h2>Are you sure you want to delete @Html.DisplayFor(model => model.Name) routine?</h2>
+
+@using (Html.BeginForm())
+{
+  <button class="btn" type="submit">Delete routine</button>
+}

@@ -1,8 +1,9 @@
-# _Hair Salon_
+# _Fitness Tracker_
 
-#### By: _*Matt Luker*_
+#### By _*Matt Luker*_
+#### By _*Curtis Brooks*_
 
-#### _A website to load new stylists to the salon roster and add clients for a stylist._
+#### _A website to keep track of a chain of gyms, their locations and the members and routines that belong to each location._
 
 ## Technologies Used
 * C#
@@ -16,7 +17,7 @@
 * Entity Framework
 
 ## Description
-_A website where users can add stylists with their name, specialty and date they were hired. After you add a stylist you can add clients for each stylist as they get them.  You can also edit and delete both stylists and clients.  Built with full CRUD functionality.  Below is an image of the project schema._
+_A website where users can add gym locations, workout routines and members.  You can match members with workout routines and add routines and members to each gym location._
 
 ![Screenshot of database schema](/schema.png)
 ## System Requirements
@@ -64,3 +65,19 @@ _A website where users can add stylists with their name, specialty and date they
 _MIT License: https://opensource.org/licenses/MIT_
 
 Copyright (c) _2022_ _Matt Luker_
+
+
+Project Goals
+
+-Look through all views and test all functionality.  Don't move on until everything works correctly
+-Make all form entries required
+-Make sure you can't add a empty form
+-In Member and Routine details show what gym they belong to
+-DateTime for StartDate working
+-Redirect the completed toggle to Details for that member
+-Images
+-Location Stats(how many members, how many people complete each routine, average completion of a routine, etc.)
+-Member leaderboard
+-Customize layout
+
+-Color Nav bar

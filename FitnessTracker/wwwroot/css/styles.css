@@ -157,14 +157,14 @@ nav li a:hover {
   width: 65%;
 }
 
-#student-details-ul {
+#member-details-ul {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   margin: 1em 0 2em 0;
 }
 
-.student-details-li {
+.member-details-li {
   background-color: rgb(77, 92, 69);
   color: white;
   width: 20em;
@@ -173,11 +173,11 @@ nav li a:hover {
   font-size: 1.3rem;
 }
 
-.student-details-li p {
+.member-details-li p {
   font-size: 1.2rem;
 }
 
-.student-details-li input {
+.member-details-li input {
   border: none;
   margin-top: .5em;
   padding: .25em .5em;
@@ -193,13 +193,13 @@ nav li a:hover {
   color: rgb(231, 96, 96);
 }
 
-#student-details-filter a{
+#member-details-filter a{
   color: white;
   background-color: rgb(77, 92, 69);
   padding: .25em .5em;
   border-radius: .25em;
 }
 
-#student-details-filter {
+#member-details-filter {
   margin-top: 1.5em;
 }

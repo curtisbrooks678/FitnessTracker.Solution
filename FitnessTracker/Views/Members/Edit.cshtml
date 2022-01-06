@@ -1,0 +1,16 @@
+@model FitnessTracker.Models.Member
+
+<h4>Edit this member: @Html.DisplayFor(model => model.Name)</h4>
+
+@using (Html.BeginForm())
+{
+  @Html.HiddenFor(model => model.MemberId)
+
+  @Html.LabelFor(model => model.Name)
+  @Html.TextBoxFor(model => model.Name)
+
+  @Html.LabelFor(model => model.StartDate)
+  @Html.EditorFor(model => model.StartDate)
+
+  <button class="btn" type="submit">Edit member</button>
+}

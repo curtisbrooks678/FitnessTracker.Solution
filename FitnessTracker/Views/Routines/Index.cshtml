@@ -1,12 +1,33 @@
 @using FitnessTracker.Models;
 @model List<FitnessTracker.Models.Routine>;
 
+
+@{
+  List<Gym> gyms = ViewData["gyms"] as List<Gym>;
+}
+
 <h1>Routines</h1>
-<ul>
+
+@if (gyms.Count == 0)
+{
+  <h3>You need to add a gym before you can add a routine</h3>
+}
+else
+{
+  if (@Model.Count == 0)
+  {
+    <h3>No routines have been added yet!</h3>
+  }
+  
+  <ul>
     @foreach (Routine routine in Model) 
     {
       <li>@Html.ActionLink($"{routine.Name}", "Details", new { id = routine.RoutineId })</li>
     }
-</ul>
+  </ul>
 
 <p>@Html.ActionLink("Add new routine", "Create")</p>
+
+}
+
+<p>@Html.ActionLink("Go Back to Home Page", "Index", "Home")</p>

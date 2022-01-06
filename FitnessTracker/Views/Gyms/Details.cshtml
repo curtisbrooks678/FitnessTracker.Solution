@@ -1,5 +1,39 @@
-@using FitnessTracker.Model;
+@using FitnessTracker.Models;
 @model FitnessTracker.Models.Gym
 
 <h2>Gym Details</h2>
-<!-- <h3>Gym Location: @Html.DisplayFor(model </h3> -->
+<h3>Gym Location: @Html.DisplayFor(model => model.Location)</h3>
+
+@if (@Model.Routines.Count == 0)
+{
+  <p>This gym has no current routines</p>
+}
+else
+{
+  <h4>Routines:</h4>
+  <ul>
+  @foreach (Routine routine in Model.Routines)
+  {
+    <li>@Html.ActionLink($"{@routine.Name}: {routine.RoutineDescription}", "Details", "Routines", new { id = routine.RoutineId })</li>
+  }
+  </ul>
+}
+
+@if (@Model.Members.Count == 0)
+{
+  <p>This gym has no current members</p>
+}
+else
+{
+  <h4>Members:</h4>
+  <ul>
+  @foreach (Member member in Model.Members)
+  {
+    <li>@Html.ActionLink($"{@member.Name}", "Details", "Members", new { id = member.MemberId })</li>
+  }
+  </ul>
+}
+
+<p>@Html.ActionLink("Edit gym", "Edit", new { id = Model.GymId })</p>
+<p>@Html.ActionLink("Delete gym", "Delete", new {id = Model.GymId })</p>
+

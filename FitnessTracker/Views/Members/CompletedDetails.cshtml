@@ -1,8 +1,8 @@
-@model FitnessTracker.Model.Member
+@model FitnessTracker.Models.Member
 
 <h2>Member Details</h2>
 <h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
-<h3>@Html.DisplayNameFor(model => model.StartDate): @Html.DisplayFor(model => model.EnrollmentDate)</h3>
+<h3>@Html.DisplayNameFor(model => model.StartDate): @Html.DisplayFor(model => model.StartDate)</h3>
 
 @if (@Model.JoinEntities.Count == 0)
 {
@@ -12,7 +12,7 @@ else
 {
   <h4>Routines</h4>
   <ul>
-    @foreach (var join in ModuleHandle.JoinEntities)
+    @foreach (var join in Model.JoinEntities)
     {
       @if (join.Complete)
       {

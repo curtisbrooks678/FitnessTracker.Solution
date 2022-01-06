@@ -18,7 +18,9 @@ namespace FitnessTracker.Controllers
 
     public ActionResult Index()
     {
-      List<Member> model = _db.Members.ToList();
+      List<Gym> gyms = _db.Gyms.ToList();
+      ViewData.Add("gyms", gyms);
+      List<Member> model = _db.Members.Include(member => member.Gym).ToList();
       return View(model);
     }
 
