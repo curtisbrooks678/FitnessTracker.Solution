@@ -69,6 +69,7 @@ Copyright (c) _2022_ _Matt Luker_
 
 Project Goals
 
+_Make sure project meets friday project objectives
 -Look through all views and test all functionality.  Don't move on until everything works correctly
 -Make all form entries required
 -Make sure you can't add a empty form
@@ -77,7 +78,9 @@ Project Goals
 -Redirect the completed toggle to Details for that member
 -Images
 -Location Stats(how many members, how many people complete each routine, average completion of a routine, etc.)
--Member leaderboard
+
 -Customize layout
 
 -Color Nav bar
+-Member leaderboard for most routines completed
+-User can send messages to members

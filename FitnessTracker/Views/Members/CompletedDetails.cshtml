@@ -11,6 +11,7 @@
 else
 {
   <h4>Routines</h4>
+  <p class="bottom-link">@Html.ActionLink("See All Routines", "Details", new { id = Model.MemberId })</p>
   <ul>
     @foreach (var join in Model.JoinEntities)
     {
@@ -21,6 +22,7 @@ else
     }
   </ul>
 }
+
 
 <p class="bottom-link">@Html.ActionLink("Add Routine", "AddRoutine", new { id = Model.MemberId })</p>
 <p class="bottom-link">@Html.ActionLink("Edit member", "Edit", new { id = Model.MemberId })</p>

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace FitnessTracker.Models
 {
@@ -7,6 +8,8 @@ namespace FitnessTracker.Models
   {
     public int MemberId { get; set; }
     public string Name { get; set; }
+    [DisplayFormat(DataFormatString = "{0:MM-dd-yyyy}", ApplyFormatInEditMode = true)]
+    // [Required ( ErrorMessage = "Start Date field cannot be blank. Please enter member start date.")]
     public DateTime StartDate { get; set; }
     public virtual ICollection<MemberRoutine> JoinEntities { get; set; }
     public virtual Gym Gym { get; set; }
