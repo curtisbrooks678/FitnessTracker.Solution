@@ -1,3 +1,4 @@
+using System;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
@@ -25,6 +26,12 @@ namespace FitnessTracker.Controllers
         .Include(gym => gym.Routines)
         .Include(gym => gym.Members)
         .FirstOrDefault(gym => gym.GymId == id);
+      int totalCompletedCount = 0;
+      foreach(Member member in thisGym.Members)
+      {
+        totalCompletedCount += member.RoutinesCompletedCounter();
+      }
+      ViewBag.CompletedCount = totalCompletedCount;
       return View(thisGym);
     }
     
@@ -73,3 +80,8 @@ namespace FitnessTracker.Controllers
     }
   }
 }
+
+
+
+
+

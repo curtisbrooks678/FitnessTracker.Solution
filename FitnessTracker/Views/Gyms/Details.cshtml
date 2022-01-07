@@ -42,4 +42,5 @@ else
 <div id="stats">
   <h4>Total number of members: @Html.DisplayFor(model => model.Members.Count)</h4>
   <h4>Total number of routines: @Html.DisplayFor(model => model.Routines.Count)</h4>
+  <h4>Total number of routines completed by members of this gym: @Html.Display("CompletedCount")</h4>
 </div>
