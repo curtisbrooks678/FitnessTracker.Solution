@@ -29,6 +29,36 @@ namespace FitnessTracker.Controllers
         .Include(routine => routine.JoinEntities)
         .ThenInclude(join => join.Member)
         .FirstOrDefault(Routine => Routine.RoutineId == id);
+
+
+        // Gym thisGym = _db.Gyms
+        // .Include(gym => gym.Routines)
+        // .Include(gym => gym.Members)
+        // .FirstOrDefault(gym => gym.GymId == id);
+        
+      // int totalCompletedCount = 0;
+      // foreach(Member member in thisGym.Members)
+      // {
+      //   totalCompletedCount += member.RoutinesCompletedCounter();
+      // }
+      // ViewBag.CompletedCount = totalCompletedCount;
+
+      // _________________
+      
+      // List<Member> members = new List<Member>{};
+      // foreach(MemberRoutine memberRoutine in thisRoutine.JoinEntities)
+      // {
+      //   if (memberRoutine.MemberId == _db.Member.MemberId)
+      //   {
+      //     ???add member to members list???
+      //   }
+      // }
+      // int totalCompletedCount = 0;
+      // foreach(Member member in members)
+      // {
+      //   totalCompletedCount += member.RoutinesCompletedCounter();
+      // }
+      // ViewBag.CompletedCount = totalCompletedCount;
       return View(thisRoutine);
     }
 
